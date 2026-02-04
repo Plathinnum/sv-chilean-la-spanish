@@ -1547,9 +1547,7 @@
         {
             "Action": "EditData",
             "Target": "Characters/Dialogue/Abigail",
-            "Entries": {
-                "spring_1": "{{i18n:npc.abigail.spring.1}}"
-            }
+            "Entries": {}
         }
     ]
 }

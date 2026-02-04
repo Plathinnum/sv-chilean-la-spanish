@@ -1,11 +1,13 @@
 {
     "Name": "Stardew Valley Español Latino Revisitado",
     "Author": "Plathinnum",
-    "Version": "1.0.0",
-    "Description": "Re-traducción completa y revisada de Stardew Valley al español.",
+    "Version": "1.0.1",
+    "Description": "Re-traducción completa y revisada de Stardew Valley al español latino (en el orden: chileno -> cono sur -> latino general).",
     "UniqueID": "Plathinnum.EspañolLatinoRevisitado",
     "MinimumApiVersion": "4.0.0",
-    "UpdateKeys": [],
+    "UpdateKeys": [
+        "Nexus:41972"
+    ],
     "ContentPackFor": {
         "UniqueID": "Pathoschild.ContentPatcher"
     }
