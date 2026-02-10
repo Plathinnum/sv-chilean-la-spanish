@@ -6,7 +6,8 @@
     "UniqueID": "Plathinnum.EspañolLatinoRevisitado",
     "MinimumApiVersion": "4.0.0",
     "UpdateKeys": [
-        "Nexus:41972"
+        "Nexus:41972",
+        "CurseForge:1453386"
     ],
     "ContentPackFor": {
         "UniqueID": "Pathoschild.ContentPatcher"
