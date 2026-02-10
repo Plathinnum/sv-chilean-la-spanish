@@ -1,7 +1,0 @@
-{
-    "include": [
-        "objects.json",
-        "ui.json",
-        "dialogues_abigail.json"
-    ]
-}
