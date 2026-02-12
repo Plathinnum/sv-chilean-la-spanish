@@ -1,10 +1,11 @@
 {
     "Name": "Stardew Valley Español Latino Revisitado",
     "Author": "Plathinnum",
-    "Version": "1.0.1",
-    "Description": "Re-traducción completa y revisada de Stardew Valley al español latino (en el orden: chileno -> cono sur -> latino general).",
+    "Version": "1.1.0",
+    "Description": "Re-traducción completa y revisada de Stardew Valley al español latino con enfoque chileno, incluyendo correcciones de errores y mejoras en la fluidez del texto.",
     "UniqueID": "Plathinnum.EspañolLatinoRevisitado",
     "MinimumApiVersion": "4.0.0",
+    "MinimumGameVersion": "1.6.0",
     "UpdateKeys": [
         "Nexus:41972",
         "CurseForge:1453386"
