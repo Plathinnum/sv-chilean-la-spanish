@@ -11,7 +11,9 @@ def main():
 
 	content_path = Path("content.json")
 	dialogue_path = Path(args.dialogue)
-
+	
+	# Extraer nombre del personaje del archivo de diálogos (ej: dialogues_emily.json -> emily)
+	character_name = dialogue_path.stem.replace('dialogues_', '')
 
 	# Leer content.json como texto para procesar líneas y reemplazar in-place
 	with open(content_path, 'r', encoding='utf-8') as f:
@@ -29,7 +31,7 @@ def main():
 			continue
 		key = parts[0].strip().strip('"')
 		value = parts[1].strip().strip('",')
-		dialogue_key = f"characters.dialogue.alex.{key.lower()}"
+		dialogue_key = f"characters.dialogue.{character_name}.{key.lower()}"
 		content_value = f"{{{{i18n:{dialogue_key}}}}}"
 
 		# Saltar si el value de content.json ya está en formato requerido
