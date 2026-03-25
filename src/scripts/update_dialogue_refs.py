@@ -7,6 +7,7 @@ def main():
 	parser.add_argument("--dialogue", required=True, help="Ruta al archivo de diálogos (ej: dialogues_alex.json)")
 	parser.add_argument("--start", type=int, required=True, help="Línea de inicio (1-indexed)")
 	parser.add_argument("--end", type=int, required=True, help="Línea de fin (inclusive, 1-indexed)")
+	parser.add_argument("--custom-text", required=True, help="Texto personalizado a insertar entre 'i18n:' y <character_name> (obligatorio)")
 	args = parser.parse_args()
 
 	content_path = Path("content.json")
@@ -14,6 +15,10 @@ def main():
 	
 	# Extraer nombre del personaje del archivo de diálogos (ej: dialogues_emily.json -> emily)
 	character_name = dialogue_path.stem.replace('dialogues_', '')
+	custom_text = args.custom_text.strip()
+	if not custom_text:
+		print("Error: --custom-text no puede estar vacío.")
+		return
 
 	# Leer content.json como texto para procesar líneas y reemplazar in-place
 	with open(content_path, 'r', encoding='utf-8') as f:
@@ -31,7 +36,7 @@ def main():
 			continue
 		key = parts[0].strip().strip('"')
 		value = parts[1].strip().strip('",')
-		dialogue_key = f"characters.dialogue.{character_name}.{key.lower()}"
+		dialogue_key = f"{custom_text}.{character_name}.{key.lower()}"
 		content_value = f"{{{{i18n:{dialogue_key}}}}}"
 
 		# Saltar si el value de content.json ya está en formato requerido
